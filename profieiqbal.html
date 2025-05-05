@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Iqbal Rupawan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #0077cc;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+    }
+
+    header h1 {
+      margin: 15px 0 5px;
+      text-transform: capitalize;
+    }
+
+    header p {
+      font-size: 1.1em;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .toggle-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="c:\Users\user\Downloads\WhatsApp Image 2025-05-05 at 10.08.36.jpeg" alt="Foto Profil">
+    <h1>Iqbal Rupawan</h1>
+    <p>Mahasiswa | Pengusaha | Boss Muda | Driver Muda</p>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya adalah mahasiswa Polhas semester 2, Prodi Teknik Informatika kelas 2B. Saya sangat menyukai desain dan merupakan alumni SMADA.
+    </p>
+  </section>
+
+  <section id="keahlian">
+    <h2>Keahlian</h2>
+    <ul>
+      <li>Canva</li>
+      <li>Unlimited uang 💸</li>
+      <li>Public Speaking</li>
+      <li>cari uang</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="kontak">
+    <h2>Kontak</h2>
+    <p>
+      <a href="mailto:iqbalrupawan699@gmail.com">Email</a>
+      <a href="https://www.instagram.com/xzball_rn" target="_blank">Instagram</a>
+    </p>
+  </section>
+
+  <!-- Tombol pindah ke bawah -->
+  <button class="toggle-button" onclick="toggleContent()">Sembunyikan Konten</button>
+
+  <footer id="footer">
+    &copy; profile by iqbal rupawan copyright
+  </footer>
+
+  <script>
+    let isHidden = false;
+
+    function toggleContent() {
+      const contentSections = ['tentang', 'keahlian', 'kontak', 'footer'];
+      contentSections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.classList.toggle('hidden');
+        }
+      });
+
+      const btn = document.querySelector('.toggle-button');
+      isHidden = !isHidden;
+      btn.textContent = isHidden ? 'Tampilkan Konten' : 'Sembunyikan Konten';
+    }
+  </script>
+
+</body>
+</html>
